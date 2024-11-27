@@ -1,6 +1,8 @@
 - Sup,Anson Noob here
 - find me on discord @ansonzxv
-- Currently a Podcaster on @hkfm975 and a Translater of Vladhog Security Bot
+- Currently a Podcaster on @hkfm975
+- RBC Radio 1 DJ
+- and a Translater of Vladhog Security Bot
 - A hk guy
 - Speaks: Cantonese/CN/EN/very few JP
 <!---
