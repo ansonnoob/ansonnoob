@@ -1,0 +1,21 @@
+addEventListener('fetch', event => {
+  event.respondWith(handleRequest(event.request));
+});
+
+async function handleRequest(request) {
+  const targetURL = 'https://hkfm975.carrd.co/' + new URL(request.url).pathname + new URL(request.url).search;
+  const response = await fetch(targetURL, {
+    headers: request.headers,
+  });
+
+  let modifiedResponse = new Response(response.body, {
+    status: response.status,
+    statusText: response.statusText,
+    headers: response.headers,
+  });
+
+  //Modify Content-Security-Policy header to allow resources to load
+  modifiedResponse.headers.set('Content-Security-Policy', "upgrade-insecure-requests");
+
+  return modifiedResponse;
+}
